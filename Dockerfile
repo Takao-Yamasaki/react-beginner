@@ -3,6 +3,7 @@ FROM node:18
 
 WORKDIR /react-beginner
 
+# TODO: 一旦不要なため、コメントアウト
 # COPY package*.json ./
 
 # RUN npm install
