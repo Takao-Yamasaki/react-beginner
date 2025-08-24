@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./react-beginner:/react-beginner/
+    ports:
+      - 1234:1234
+    tty: true
+    stdin_open: true
