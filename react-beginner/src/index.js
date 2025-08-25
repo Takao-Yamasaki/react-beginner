@@ -182,13 +182,13 @@
 // console.log(arr3);
 
 // 配列のコピー・結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4];
-arr6[0] = 100;
-console.log(arr6);
-console.log(arr4);
+// const arr6 = [...arr4];
+// arr6[0] = 100;
+// console.log(arr6);
+// console.log(arr4);
 
 // const arr7 = [...arr4, ...arr5];
 // console.log(arr7);
@@ -198,3 +198,54 @@ console.log(arr4);
 // arr4[0] = 100;
 // console.log(arr4);
 // console.log(arr8);
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+const nameArr = ["田中", "山田", "じゃけえ"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+// 配列から順番に取り出して出力する
+// nameArr.map((name) => {
+//   console.log(name);
+// });
+
+// 配列から順番に取り出して新しい配列として定義する
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+
+// ワンラインで記載することも可能
+// nameArr.map((name) => console.log(name));
+
+// このようにindexを取得することも可能
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+
+// 配列から特定の条件に合致するもののみ取り出したい
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
+
+// じゃけえ以外の人には語尾に「さん」を付けて新しい配列を定義する
+// これは誤り。
+// const newNameArr = nameArr.filter((name) => {
+//   if (name != "じゃけえ") {
+//     const str = name + "さん";
+//     return str;
+//   }
+// });
+// console.log(newNameArr);
+
+// 新しく要素を付けていくので、mapが適切
+const newNameArr = nameArr.map((name) => {
+  if (name != "じゃけえ") {
+    return `${name}さん`;
+  }
+  return name;
+});
+console.log(newNameArr);
