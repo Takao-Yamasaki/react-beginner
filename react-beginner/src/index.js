@@ -122,12 +122,40 @@
 // console.log(message2);
 
 // 配列の分割代入
-const myProfile = ["じゃけえ", 31];
+// const myProfile = ["じゃけえ", 31];
 // const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`
 // console.log(message3);
 
 // 配列にはプロパティ名がないので、適当な変数名をつける
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。年齢は${age}歳です。`
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}歳です。`
+// console.log(message4);
 
+/**
+ * デフォルト値(引数, 分割代入)
+ */
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
+// sayHello();
+// sayHello("じゃけえ");
+
+// const myProfile = {
+//   age: 31
+// };
+// const {age, name = "ゲスト"} = myProfile;
+// // 31
+// console.log(age);
+// // ゲスト
+// console.log(name);
+
+/**
+ * オブジェクトの省略記法
+ */
+const name = "じゃけえ"
+const age = 31;
+
+// プロパティ名と変数名が同一の場合は省略可能
+const myProfile = {
+  name,
+  age
+};
+console.log(myProfile);
