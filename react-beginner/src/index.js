@@ -257,14 +257,49 @@ const nameArr = ["田中", "山田", "じゃけえ"];
 // const val1 = 1 > 2 ? "trueです" : "falseです";
 // console.log(val1);
 
-const num = 1300;
+// const num = 1300;
 // console.log(num.toLocaleString());
 
 // 文字列であれば、数値を入力してくださいと出力される
 // const formattedNum = typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
 // console.log(formattedNum);
 
-const checkSum = (num1, num2) => {
-  return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+// }
+// console.log(checkSum(60, 50));
+
+/**
+ * 論理演算子の本当の意味を知ろう && ||
+ */
+// truthy, falsyについて(暗黙的にtrue or false判定になる)
+// const val = 0;
+// if (val) {
+//   console.log("valはtruthyです"); 
+// } else {
+//   console.log("valはfalsyです");
+// }
+
+const flag1 = true;
+const flag2 = true;
+
+if (flag1 || flag2) {
+  console.log("1か2はtrueになります");
 }
-console.log(checkSum(60, 50));
+if (flag1 && flag2) {
+  console.log("1も2もtrueになります");
+}
+
+// ||は、左側がtruthyの場合その時点で返却する
+// const num = null;
+// const num = 100;
+const num = undefined;
+const fee = num || "金額未設定です";
+console.log(fee);
+
+// &&は、左側がfalsyの場合その時点で返却する
+// const num2 = 100;
+const num2 = null;
+//truthy: 何か設定されました falsy: num2の値
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
