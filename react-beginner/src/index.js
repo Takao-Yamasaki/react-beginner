@@ -242,10 +242,29 @@ const nameArr = ["田中", "山田", "じゃけえ"];
 // console.log(newNameArr);
 
 // 新しく要素を付けていくので、mapが適切
-const newNameArr = nameArr.map((name) => {
-  if (name != "じゃけえ") {
-    return `${name}さん`;
-  }
-  return name;
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//   if (name != "じゃけえ") {
+//     return `${name}さん`;
+//   }
+//   return name;
+// });
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ * ある条件 ? 条件がtrueの場合の処理 : 条件がfalseの場合の処理
+ */
+// const val1 = 1 > 2 ? "trueです" : "falseです";
+// console.log(val1);
+
+const num = 1300;
+// console.log(num.toLocaleString());
+
+// 文字列であれば、数値を入力してくださいと出力される
+// const formattedNum = typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+}
+console.log(checkSum(60, 50));
